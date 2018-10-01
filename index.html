@@ -7,6 +7,7 @@
 <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
 <script src="scripts/rAF.js"></script>
 <script src="scripts/canvas-ellipse-polyfill.js"></script>
+
 <style>
 body {
 	background-color: #000000;
@@ -39,7 +40,7 @@ function draw() {
 		c.clearRect(0,0,canvas.width, canvas.height);
 	}
 	c.strokeStyle = "#eee";
-	c.lineWidth = "10";
+	c.lineWidth = "1";
 
 	for (var i = 0, l = points.length; i<l; i++) {
 		rotationAngle = points[i].rotationAngle || 0;
@@ -47,8 +48,8 @@ function draw() {
 		radiusY = points[i].radiusY || 40;
 
 		// add some pixels for better visibility
-		radiusX += 1;
-		radiusY += 1;
+		radiusX += 1; //20->1
+		radiusY += 1; //20->1
 
 		/* draw all circles */
 		c.beginPath();
