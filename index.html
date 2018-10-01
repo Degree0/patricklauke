@@ -53,7 +53,7 @@ function draw() {
 
 		/* draw all circles */
 		c.beginPath();
-		c.ellipse(points[i].clientX, points[i].clientY, radiusX, radiusY, rotationAngle * Math.PI/180, 0, Math.PI*2, true);
+		c.ellipse(points[i].clientX, points[i].clientY, radiusX, radiusY, rotationAngle * Math.PI/180, 0, Math.PI*2, false);
 		c.stroke();
 
 		// HUD (hacky)
