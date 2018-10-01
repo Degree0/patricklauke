@@ -57,7 +57,7 @@ function draw() {
 		c.stroke();
 
 		// HUD (hacky)
-		var hud_props = ['touch']; //, 'clientX: '+points[i].clientX+' clientY: '+points[i].clientY];
+		var hud_props = ['touch', 'clientX: '+points[i].clientX+' clientY: '+points[i].clientY];
 		if (points[i].radiusX && points[i].radiusY) {
 		//	hud_props.push('radiusX: '+points[i].radiusX+' radiusY: '+points[i].radiusY);
 		}
@@ -74,7 +74,7 @@ function draw() {
 		c.fillStyle = "#fff";
 		// c.fillText(hud_props[0], points[i].clientX + radiusX + 20, points[i].clientY);
 		c.fillStyle = "#fff";
-		c.font = "20px Arial";
+		c.font = "30px Arial";
 		for (var h_i = 1, h_j = hud_props.length; h_i<h_j; h_i++) {
 			c.fillText(hud_props[h_i], points[i].clientX + radiusX + 20, points[i].clientY + (h_i + 1) * 12);
 		}
